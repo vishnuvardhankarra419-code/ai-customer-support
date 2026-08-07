@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+backend/target/
+frontend/dist/
+frontend/build/
+
+# Environment files (keep .env.example but ignore actual .env)
+.env
+frontend/.env
+backend/src/main/resources/application-local.properties
+
+# Large binary files
+*.zip
+*.jar
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+*.class
+
+# Logs
+*.log
+
+# Test artifacts
+admin_token.json
+token_response.json
