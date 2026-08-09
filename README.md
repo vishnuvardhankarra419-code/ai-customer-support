@@ -39,8 +39,7 @@ UPDATE users SET password = '<bcrypt_hash>' WHERE email = 'admin@aisupport.com';
 
 | Service       | URL                                         |
 |---------------|---------------------------------------------|
-| Frontend App  | http://localhost:5173                       |
-| Backend API   | http://localhost:8080                       |
+| API           | http://localhost:8080                       |
 | Swagger Docs  | http://localhost:8080/swagger-ui.html       |
 
 ---
