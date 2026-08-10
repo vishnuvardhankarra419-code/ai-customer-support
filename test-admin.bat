@@ -18,7 +18,7 @@ curl -s http://localhost:8080/api/admin/users -H "Authorization: Bearer %TOKEN%"
 echo.
 echo.
 echo [3] Analytics overview...
-curl -s http://localhost:8080/api/analytioverviewcs/ -H "Authorization: Bearer %TOKEN%"
+curl -s http://localhost:8080/api/analytics/overview -H "Authorization: Bearer %TOKEN%"
 
 echo.
 echo Done!
