@@ -29,3 +29,9 @@ Thumbs.db
 # Test artifacts
 admin_token.json
 token_response.json
+
+# Python
+__pycache__/
+*.pyc
+.streamlit/
+
