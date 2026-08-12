@@ -19,7 +19,7 @@ export default function ChatBubble({ message }) {
         {/* Message Bubble */}
         <div className={`px-5 py-4 ${isUser ? 'bubble-user' : 'bubble-ai'}`}>
           <div className="prose prose-invert max-w-none text-sm">
-            {message.content.split('\n').map((line, i) => (
+            {(message.content || '').split('\n').map((line, i) => (
               <p key={i} className={i === 0 ? 'mt-0' : 'mt-2'}>
                 {line}
               </p>

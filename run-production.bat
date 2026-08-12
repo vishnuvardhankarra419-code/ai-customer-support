@@ -25,7 +25,7 @@ for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":8080 "') do (
 )
 
 echo  [..] Starting Standalone Application JAR...
-start "AI Customer Support - Production Server" cmd /k "java -jar C:\Users\vishnu reddy\ai-customer-support\backend\target\ai-customer-support-1.0.0.jar"
+start "AI Customer Support - Production Server" cmd /k "java -jar "%~dp0backend\target\ai-customer-support-1.0.0.jar""
 
 echo  [..] Waiting 10 seconds for server to initialize...
 timeout /t 10 /nobreak > nul

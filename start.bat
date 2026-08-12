@@ -28,13 +28,13 @@ for /f "tokens=5" %%a in ('netstat -ano ^| findstr ":5173 "') do (
 )
 
 echo  [..] Starting Backend (Spring Boot on port 8080)...
-start "Backend - Spring Boot" cmd /k "cd /d C:\Users\vishnu reddy\ai-customer-support\backend && mvn spring-boot:run"
+start "Backend - Spring Boot" cmd /k "cd /d "%~dp0backend" && mvn spring-boot:run"
 
 echo  [..] Waiting 15 seconds for backend to initialize...
 timeout /t 15 /nobreak > nul
 
 echo  [..] Starting Frontend (Vite on port 5173)...
-start "Frontend - Vite" cmd /k "cd /d C:\Users\vishnu reddy\ai-customer-support\frontend && npm run dev"
+start "Frontend - Vite" cmd /k "cd /d "%~dp0frontend" && npm run dev"
 
 timeout /t 3 /nobreak > nul
 

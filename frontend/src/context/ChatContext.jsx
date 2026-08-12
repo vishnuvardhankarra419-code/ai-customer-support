@@ -50,11 +50,6 @@ export function ChatProvider({ children }) {
         sessionId: currentSessionId
       })
       
-      // Update with real response (which includes the AI reply)
-      // Since backend only returns the AI message in ChatMessageResponse, 
-      // we need to re-fetch messages for the session to be safe, or just append the AI message.
-      // But if it's a new session, we need the new sessionId.
-      
       const newSessionId = res.data.sessionId
       if (!currentSessionId && newSessionId) {
         setCurrentSessionId(newSessionId)
@@ -64,7 +59,8 @@ export function ChatProvider({ children }) {
       setMessages(prev => [...prev, res.data])
       return res.data
     } catch (err) {
-      toast.error('Failed to send message')
+      const errorMsg = err.response?.data?.message || err.response?.data?.error || err.message || 'Failed to send message'
+      toast.error(errorMsg)
       // Remove optimistic message on failure
       setMessages(prev => prev.slice(0, -1))
       throw err

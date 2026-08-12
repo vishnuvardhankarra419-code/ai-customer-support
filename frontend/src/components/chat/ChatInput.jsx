@@ -12,7 +12,11 @@ export default function ChatInput() {
 
     const content = message
     setMessage('')
-    await sendMessage(content)
+    try {
+      await sendMessage(content)
+    } catch (err) {
+      setMessage(content)
+    }
   }
 
   return (
