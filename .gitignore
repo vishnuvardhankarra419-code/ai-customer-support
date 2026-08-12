@@ -33,6 +33,6 @@ token_response.json
 # Python
 __pycache__/
 *.pyc
-.streamlit/
+.streamlit/secrets.toml
 query
 

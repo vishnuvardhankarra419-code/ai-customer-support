@@ -4,7 +4,38 @@ A full-stack AI-powered customer support platform built with **React + Vite** (f
 
 ---
 
-## 🚀 Quick Start
+## 🎈 Streamlit Deployment & Quick Start
+
+### 1. Run Streamlit Application Locally
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Streamlit Web Application
+streamlit run streamlit_app.py
+```
+Or run:
+```bash
+streamlit run app.py
+```
+
+### 2. Streamlit Community Cloud Deployment
+1. Push this repository to your GitHub account (`https://github.com/vishnuvardhankarra419-code/ai-customer-support.git`).
+2. Log into [share.streamlit.io](https://share.streamlit.io).
+3. Click **"New App"** and select repository `ai-customer-support`.
+4. Set Main file path: `streamlit_app.py`.
+5. Under **Advanced Settings -> Secrets**, add:
+```toml
+[general]
+OPENAI_API_KEY = "your-openai-api-key"
+OPENAI_MODEL = "gpt-4o"
+API_BASE_URL = "http://localhost:8080/api"
+```
+6. Click **Deploy!**
+
+---
+
+## 🚀 Quick Start (Full Stack Mode)
 
 ### One-Click Launch
 ```
